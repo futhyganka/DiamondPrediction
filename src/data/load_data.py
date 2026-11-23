@@ -1,10 +1,12 @@
 # Nạp thư viện pandas và đặt tên viết tắt là pd — dùng để làm việc với dữ liệu dạng bảng (DataFrame), hỗ trợ đọc/ghi tệp CSV, Excel và tiền xử lý dữ liệu
 import pandas as pd
 
+# Hàm nạp dữ liệu từ tệp CSV và trả về DataFrame
 def load_data(file_path):
     # Đọc tệp CSV với dấu phân cách các cột là dấu phẩy (,) và trả về dataframe
     return pd.read_csv(file_path, sep=',')
 
+# Hàm kiểm tra dữ liệu: in ra thông tin tổng quan, 5 dòng đầu tiên, các giá trị phân loại và thống kê mô tả
 def check_data(dataframe):
     # In kích thước của tập dữ liệu (số dòng, số cột)
     print(f"Kích thước tập dữ liệu ban đầu: {dataframe.shape}\n")

@@ -5,6 +5,7 @@ import pandas as pd
 # Import đường dẫn thư mục models từ file cấu hình config
 from src.config import MODELS_DIR
 
+# Hàm nạp mô hình từ file .pkl dựa trên tên mô hình
 def load_model(model_name):
     # Tạo đường dẫn đầy đủ đến file mô hình .pkl trong thư mục models
     model_path = MODELS_DIR / f"{model_name}.pkl"
@@ -17,7 +18,7 @@ def load_model(model_name):
     # Nạp và trả về đối tượng mô hình từ file
     return joblib.load(model_path)
 
-
+# Hàm dự đoán giá kim cương dựa trên dữ liệu đầu vào và mô hình đã nạp
 def predict_price(data, model_name="random_forest"):
     # Đọc mô hình tương ứng từ đĩa
     model = load_model(model_name)
@@ -116,6 +117,7 @@ def interactive_predict():
             # Nhập kích thước chiều cao z tính bằng mm
             z = float(input("z - Chiều cao (mm, ví dụ: 2.43): "))
 
+        # Bắt lỗi nếu người dùng nhập sai định dạng số
         except ValueError:
             # Bắt lỗi nếu người dùng nhập sai định dạng số
             print("\n[LỖI] Giá trị nhập phải là số hợp lệ! Vui lòng thử lại.")

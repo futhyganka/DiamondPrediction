@@ -5,6 +5,7 @@ from pathlib import Path
 # Nạp đường dẫn lưu trữ file tiền xử lý mặc định từ file cấu hình config
 from src.config import PROCESSED_DATA, PROCESSED_DATA_DIR
 
+# Hàm tiền xử lý dữ liệu: loại bỏ dữ liệu nhiễu, trùng lặp và mã hóa các thuộc tính phân loại
 def preprocessing(diamonds, save_path=PROCESSED_DATA):
     # Tạo bản sao dữ liệu để không làm ảnh hưởng trực tiếp đến DataFrame ban đầu
     df = diamonds.copy()

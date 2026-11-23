@@ -42,7 +42,7 @@ def save_model(model, model_name):
     # In thông báo xác nhận đã lưu mô hình thành công
     print(f"Đã lưu mô hình: {model_path}")
 
-
+# Hàm huấn luyện tất cả các mô hình và lưu mô hình vào thư mục models/
 def train_all_models(X, y):
     # Khởi tạo mô hình KNN thuần với các tham số tối ưu (không kèm scaler bên trong mô hình)
     knn = create_knn(
