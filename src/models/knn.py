@@ -1,7 +1,7 @@
 # Import mô hình KNN Regression từ thư viện scikit-learn
 from sklearn.neighbors import KNeighborsRegressor
 
-# Hàm tạo model KNN thuần dựa trên các siêu tham số được yêu cầu (chuẩn hóa MinMaxScaler sẽ thực hiện ở bước train)
+# Hàm tạo model KNN thuần 
 def create_knn(
     n_neighbors=8,              # Số lượng láng giềng gần nhất (mặc định là 8 theo yêu cầu)
     weights='distance',         # Trọng số tính theo nghịch đảo khoảng cách

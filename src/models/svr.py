@@ -5,7 +5,7 @@ from sklearn.preprocessing import StandardScaler
 # Import hàm make_pipeline để kết hợp bộ chuẩn hóa StandardScaler và mô hình SVR
 from sklearn.pipeline import make_pipeline
 
-# Hàm tạo model SVR với các tham số tối ưu theo yêu cầu
+# Hàm tạo model SVR
 def create_svr(
     kernel='rbf',          # Dạng hàm nhân Kernel (mặc định là rbf theo yêu cầu)
     C=1000,                # Hệ số phạt điều chuẩn (mặc định C = 1000 theo yêu cầu)

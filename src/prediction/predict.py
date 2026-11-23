@@ -45,7 +45,7 @@ def predict_price(data, model_name="random_forest"):
     # Trả về giá trị dự đoán đầu tiên
     return prediction[0]
 
-
+# Hàm tương tác với người dùng để nhập thông số kim cương và dự đoán giá
 def interactive_predict():
     # Vòng lặp chính cho phép người dùng nhập và dự đoán nhiều lần
     while True:

@@ -7,6 +7,7 @@ from sklearn.base import clone
 # Import hàm tính các chỉ số đánh giá hồi quy MAE, MSE, RMSE, R2
 from src.evaluation.metrics import calculate_metrics
 
+# Hàm thực hiện K-fold Cross Validation cho một mô hình hồi quy, trả về kết quả đánh giá của từng fold, kết quả trung bình, mô hình tốt nhất và scaler tương ứng
 def cross_validation(model, X, y, n_splits=5, random_state=42, scaler=None):
     # Khởi tạo đối tượng KFold với 5 fold, xáo trộn dữ liệu (shuffle) và cố định seed ngẫu nhiên
     kf = KFold(

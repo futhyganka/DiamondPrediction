@@ -3,6 +3,7 @@ import numpy as np
 # Import các hàm tính toán độ đo hồi quy từ scikit-learn
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
+# Hàm tính toán các chỉ số đánh giá hồi quy MAE, MSE, RMSE, R2 dựa trên giá trị thực tế và giá trị dự đoán
 def calculate_metrics(y_true, y_pred):
     # Tính sai số tuyệt đối trung bình (MAE) giữa giá trị thực tế và giá trị dự đoán
     mae = mean_absolute_error(y_true, y_pred)

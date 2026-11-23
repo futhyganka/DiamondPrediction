@@ -1,3 +1,6 @@
+# data processing
+data/processed/
+
 # Trained models
 models/
 
